@@ -2,8 +2,9 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { getData } from "./ApiCalls/getData";
 import { useUserData } from "./context/userContext";
-import { Card } from "./Compnents/Card/Card";
+import { CardComponent } from "./Compnents/Card/CardComponent";
 import { TouchBallLoading } from "react-loadingg";
+import { Col, Row } from "antd";
 
 function App() {
   const { user_data, setUserData } = useUserData();
@@ -21,10 +22,14 @@ function App() {
     <div className="App">
       {show_loading && <TouchBallLoading />}
       {
-        <div className="responsive-grid">
+        <Row>
           {!show_loading &&
-            user_data.map((ele) => <Card key={ele.id} user={ele} />)}
-        </div>
+            user_data.map((ele) => (
+              <Col key={ele.id}>
+                <CardComponent user={ele}></CardComponent>
+              </Col>
+            ))}
+        </Row>
       }
     </div>
   );

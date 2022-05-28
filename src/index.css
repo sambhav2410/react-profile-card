@@ -18,6 +18,12 @@ code {
   align-items: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .grey {
   color: rgb(161, 159, 159);
 }
@@ -34,17 +40,24 @@ p {
   margin: 0;
 }
 
+.ant-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 ul {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-.responsive-grid {
-  display: grid;
-  width: 100%;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  justify-items: center;
+.pad-1 {
+  padding: 1rem;
+}
+
+.fnt-18 {
+  font-size: 18px;
 }
 
 .row-reverse {
@@ -53,10 +66,4 @@ ul {
 
 .jst-end {
   justify-content: flex-end;
-}
-
-@media only screen and (max-width: 330px) {
-  .responsive-grid {
-    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
-  }
 }

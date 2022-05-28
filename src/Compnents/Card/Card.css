@@ -1,68 +1,27 @@
 .card {
   width: 18rem;
   border: 1px solid #e8e8e8;
+  height: fit-content;
 }
 
-.img-bg {
-  height: 11rem;
+.CardImageContainer {
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 11rem;
 }
 
-.img-bg img {
+.CardImageContainer img {
   height: 100%;
 }
 
-.user-info {
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.user-option {
-  padding: 0.5rem 0.1rem;
-  display: flex;
-  background-color: #fafafa;
-  border-top: 1px solid #e8e8e8;
-  list-style: none;
-  height: 2.5rem;
-  align-items: center;
-}
-
-.user-option li {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.user-option li:hover {
-  cursor: pointer;
-}
-
-.user-option > li:not(:last-child) {
-  border-right: 1px solid #e8e8e8;
-}
-
-.user-option .fa-edit:hover,
-.user-option .fa-trash:hover {
-  color: #577de6;
-}
-
-.user-info p {
-  word-wrap: break-word;
-}
-
-.user-info div {
-  flex-wrap: wrap;
+.card .user-info {
+  color: grey;
 }
 
 @media only screen and (max-width: 330px) {
   .card {
-    width: 13rem;
+    width: 14rem;
   }
 }
