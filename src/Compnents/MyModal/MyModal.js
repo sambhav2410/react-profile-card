@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useUserData } from "../../context/userContext";
 
 export const MyModal = ({ user, visible, hideModal }) => {
-  const [curr_user, setCurrUSer] = useState({ ...user });
   const { setUserData } = useUserData();
+  const [curr_user, setCurrUSer] = useState({ ...user });
 
   const handleChange = (e) => {
     const name = e.target.name;

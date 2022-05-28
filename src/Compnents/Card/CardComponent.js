@@ -79,12 +79,9 @@ export const CardComponent = ({ user }) => {
           <p style={{ margin: 0 }}>{user.website}</p>
         </p>
       </Card>
-      <MyModal
-        user={user}
-        visible={show_modal}
-        hideModal={hideModal}
-       
-      />
+      {show_modal && (
+        <MyModal user={user} visible={show_modal} hideModal={hideModal} />
+      )}
     </>
   );
 };
