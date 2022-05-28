@@ -1,13 +1,62 @@
 body {
+  padding: 1rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.grey {
+  color: rgb(161, 159, 159);
+}
+
+.red {
+  color: red;
+}
+
+.fnt-1-2 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.responsive-grid {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  justify-items: center;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.jst-end {
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 330px) {
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  }
 }
