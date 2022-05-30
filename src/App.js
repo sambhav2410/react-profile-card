@@ -17,7 +17,7 @@ function App() {
       setShowLoading(false);
     };
     fetchData();
-  }, []);
+  }, [setUserData]); 
   return (
     <div className="App">
       {show_loading && <TouchBallLoading />}
