@@ -31,7 +31,7 @@ export const CardComponent = ({ user }) => {
         className="card"
         cover={
           <div style={{ display: "flex" }} className="CardImageContainer">
-            <img src={user.imgSrc} />
+            <img src={user.imgSrc} alt={user.id} />
           </div>
         }
         actions={[
